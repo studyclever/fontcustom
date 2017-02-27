@@ -67,6 +67,9 @@ module Fontcustom
     class_option :single_quotes, :aliases => %w|--signle-quotes -Q|, :type => :boolean,
       :desc => "Use single quotes in generated CSS and SCSS templates"
 
+    class_option :css3, :type => :boolean,
+      :desc => "Ensure CSS3 compliant css/scss"
+
     class_option :quiet, :aliases => "-q", :type => :boolean,
       :desc => "Hide status messages."
 

@@ -183,7 +183,7 @@ module Fontcustom
 
       def glyph_selectors
         output = @glyphs.map do |name, value|
-          @options[:css_selector].sub("{{glyph}}", name.to_s) + "::before"
+          @options[:css_selector].sub("{{glyph}}", name.to_s) + before_selector
         end
         output.join ",\n"
       end
@@ -205,13 +205,17 @@ module Fontcustom
 
       def glyphs
         output = @glyphs.map do |name, value|
-          %Q|#{@options[:css_selector].sub('{{glyph}}', name.to_s)}::before { content: #{quote}\\#{value[:codepoint].to_s(16)}#{quote}; }|
+          %Q|#{@options[:css_selector].sub('{{glyph}}', name.to_s)}#{before_selector} { content: #{quote}\\#{value[:codepoint].to_s(16)}#{quote}; }|
         end
         output.join "\n"
       end
 
       def quote
         @quote ||= @options[:single_quotes] ? "'" : '"'
+      end
+
+      def before_selector
+        @before_selector ||= @options[:css3] ? '::before' : ':before'
       end
     end
   end

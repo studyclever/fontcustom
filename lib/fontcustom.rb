@@ -39,6 +39,7 @@ module Fontcustom
     :debug => false,
     :force => false,
     :quiet => false,
-    :single_quotes => false
+    :single_quotes => false,
+    :css3 => false
   }
 end
