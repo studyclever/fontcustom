@@ -40,6 +40,7 @@ module Fontcustom
     :debug => false,
     :force => false,
     :quiet => false,
-    :copyright => ''
+    :copyright => '',
+    :single_quotes => false
   }
 end

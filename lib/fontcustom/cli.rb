@@ -67,6 +67,9 @@ module Fontcustom
     class_option :force, :aliases => "-F", :type => :boolean,
       :desc => "Forces compilation, even if inputs have not changed."
 
+    class_option :single_quotes, :aliases => %w|--signle-quotes -Q|, :type => :boolean,
+      :desc => "Use single quotes in generated CSS and SCSS templates"
+
     class_option :quiet, :aliases => "-q", :type => :boolean,
       :desc => "Hide status messages."
 

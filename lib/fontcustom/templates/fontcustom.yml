@@ -31,7 +31,10 @@
 #quiet: true
 
 # Copyright information.
-#copyright: 
+#copyright:
+
+# Use single quotes in generated CSS and SCSS templates (default false)
+# single_quotes: true
 
 
 # -----------------------------------------------------------------------------
